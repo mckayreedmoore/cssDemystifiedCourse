@@ -2,12 +2,16 @@ body {
   font-family: 'PT Serif', serif;
   font-size: 1.125rem;
   color: #414141;
-  text-align: center;
-
 }
 
 a {
   color: #CA5E10;
+}
+
+header {
+  max-width: 70rem;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .title {
