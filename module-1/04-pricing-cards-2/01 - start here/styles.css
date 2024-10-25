@@ -23,6 +23,7 @@ h1 {
 .plans {
   display: flex;
   justify-content: center;
+  margin-bottom: 2rem;
 }
 
 .plan {
@@ -81,4 +82,9 @@ h1 {
 .button--dark {
   color: white;
   background: #4e4e4e;
+}
+
+.button--accent {
+  background-color: #00a1ab;
+  color: white;
 }
