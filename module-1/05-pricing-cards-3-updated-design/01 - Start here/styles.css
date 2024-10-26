@@ -15,13 +15,14 @@
 body {
   font-family: "Roboto", sans-serif;
   text-align: center;
+  margin: 0;
 }
 
 .section-title {
   font-size: 2.5rem;
   text-transform: uppercase;
   font-weight: 900;
-  margin-top: 3em;
+  margin-top: 2em;
   margin-bottom: 0;
   color: #00a1ab;
 }
@@ -32,7 +33,7 @@ body {
 }
 
 .container {
-  padding: 0 2em;
+  padding: 0 2em 5em;
   margin: 0 auto;
   max-width: 1000px;
 }
@@ -48,8 +49,6 @@ body {
   border-radius: 0.25em;
   text-transform: uppercase;
   font-weight: 700;
-  background: #00a1ab;
-  color: #fff;
 }
 
 .button--light {
@@ -58,13 +57,17 @@ body {
 }
 
 .button--dark {
-  color: white;
   background: #4e4e4e;
+  color: white;
 }
 
 /* ///////////////
   Plans
   ////////////// */
+
+.pricing {
+  padding-bottom: 5rem;
+}
 
 .plans {
   display: flex;
@@ -73,7 +76,7 @@ body {
 }
 
 .plan {
-  width: 200px;
+  width: 16.5em;
   padding: 2em;
   border-radius: 1em;
   margin: 0 0.5em;
@@ -88,9 +91,9 @@ body {
   color: #00a1ab;
 }
 
-.plan--light .button {
-  color: white;
-  background: #4e4e4e;
+.plan--dark {
+  color: #fff;
+  background: #4E4E4E;
 }
 
 .plan--accent {
@@ -98,9 +101,13 @@ body {
   background: linear-gradient(-45deg, #00a1ab, #3741a0);
 }
 
-.plan--accent .button {
-  background: white;
-  color: #4e4e4e;
+.text--accent {
+  color: #00a1ab;
+}
+
+.button--accent {
+  color: white;
+  background: #00a1ab;
 }
 
 .plan__title {
@@ -130,6 +137,22 @@ body {
   Teams
   ////////////// */
 
+.team {
+  background-color: #e5e3e8;
+  padding: 1.5rem 0;
+}
+
+.name {
+  font-size: 1.85rem;
+  font-weight: 900;
+  margin: 0;
+}
+
+.position { 
+  margin-top: 0;
+  font-weight: 600;
+}
+
 .team-members {
   display: flex;
   flex-wrap: wrap;
@@ -139,14 +162,33 @@ body {
   background: #abc;
   text-align: left;
   flex: 1 1 45%;
-  margin: 1em;
+  margin: 1rem;
   display: flex;
-  border-radius: 0.5em;
+  border-radius: 0.5rem;
   align-items: center;
-  padding: 0.5em 2em 0.5em 0.5em;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+} 
+
+.team-member--reverse {
+  flex-direction: row-reverse;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+}
+
+.team-member--light {
+  background: linear-gradient(-45deg, #e5e3e8, #fafafa);
+  color: #4e4e4e;
+}
+
+.team-member--dark {
+  background: #4e4e4e;
+  color: #fff;
 }
 
 .team-member img {
   width: 10rem;
   border-radius: 0.25em;
+}
+
+.info {
+  padding: 0 1rem;
 }
