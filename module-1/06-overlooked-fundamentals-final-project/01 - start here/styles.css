@@ -9,6 +9,8 @@
   --clr-dev-300: #e2fcff;
   --clr-dev-400: #024f4f;
 
+  --clr-accent-400: #7e47c5;
+
   --ff-accent: "Podkova", serif;
   --ff-base: "Open Sans", sans-serif;
 
@@ -19,25 +21,90 @@
   --border-radius: 0.75rem;
 }
 
+*, 
+*::after, 
+*::before {
+  box-sizing: content-box;
+}
 
+body {
+  margin: 0;
+  font-family: var(--ff-base);
+}
 
+img {
+  border-radius: var(--border-radius);
+}
 
+.name {
+  font-family: var(--ff-accent);
+  font-weight: var(--fw-700);
+  font-size: 2rem;
+  opacity: 0.75;
+  margin: 0;
+}
 
+.tag {
+  border-radius: var(--border-radius);
+  background-color: var(--bg);
+  color: var(--fg);
+  font-weight: 600;
+  font-size: .8rem;
+  padding: 0 0.25rem;
+}
 
+.ux {
+  --bg: var(--clr-ux-300);
+  --fg: var(--clr-ux-400);
+}
+.ui {
+  --bg: var(--clr-ui-300);
+  --fg: var(--clr-ui-400);
+}
+.dev {
+  --bg: var(--clr-dev-300);
+  --fg: var(--clr-dev-400);
+}
 
+.candidate {
+  padding: 1rem;
+  max-width: 30rem;
+}
 
+.roles {
+  margin: 0;
+  display: flex; 
+  justify-content: left;
+}
 
+.bio {
+  margin: 0;
+  opacity: 0.75;
+}
 
+.social {
+  display: flex;
+  justify-content: space-evenly;
+  padding-left: 0;
+  margin-bottom: 0;
+}
 
+.social li {
+  list-style-type: none;
+}
 
-
-
-
-
-
-
-
-
+.btn {
+  align-self: end;
+  justify-self: end;
+  display: inline-block;
+  cursor: pointer;
+  padding: 0.5em 3em;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--fg, #fff);
+  background: var(--bg, var(--clr-accent-400));
+  border-radius: var(--border-radius);
+}
 
 
 /* /////////////////
@@ -71,6 +138,7 @@
 @media (min-width: 500px) {
   .candidate {
     grid-template-columns: min-content minmax(15rem, 22.5rem);
+    grid-template-rows: min-content min-content 1fr auto;
     grid-template-areas:
       "img name"
       "img role"
